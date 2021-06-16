@@ -71,3 +71,19 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+.modal-header
+{
+	background: $background-dark;
+	button
+	{
+		color: floralwhite;
+	}
+}
+.modal-body
+{
+	background: $background-pale;
+}
+.modal-title
+{
+	color: floralwhite;
+}
