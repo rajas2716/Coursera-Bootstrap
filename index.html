@@ -35,8 +35,74 @@
                     </a>
                 </span>
             </div>
+        </div>    </nav>
+    <div id="reservetable" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="guests" class="col-sm-4 col-form-label"><strong>Number of Guests</strong></label>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 1
+                            </div>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 2 
+                            </div>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 3 
+                            </div>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 4 
+                            </div>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 5 
+                            </div>
+                            <div class="col col-sm-1">
+                                <input type="radio"> 6
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-4 col-form-label"><strong>Section</strong></label>
+                            <div class="col-sm-4 btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-success active">
+                                <input type="radio" name="nonsmoking" id="nonsmoking" autocomplete="off" checked> Non-Smoking
+                              </label>
+                              <label class="btn btn-danger">
+                                <input type="radio" name="smoking" id="smoking" autocomplete="off"> Smoking
+                              </label>
+                            </div>
+                        </div> 
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-4 col-form-label"><strong>Date and Time</strong></label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div> 
+                        <div class="form-group row">
+                        <div class="offset-sm-4 col-md-10">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Reserve
+                            </button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>   
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -85,7 +151,7 @@
                     <img src="img/logo.png"></img>
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#Reserve" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom"><button type="button" class="btn-lg btn-warning btn-block">Reserve Table</button></a>
+                    <a data-toggle="modal" data-target="#reservetable" data-html="true" title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom"><button type="button" class="btn-lg btn-warning btn-block">Reserve Table</button></a>
                 </div>
             </div>
         </div>
@@ -127,9 +193,17 @@
                     <a class="carousel-control-prev" href="#mycarousel" rol="button" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
-                    <a class="carousel-control-next" href="#mycarousel" rol="button" data-slide="prev">
+                    <a class="carousel-control-next" href="#mycarousel" rol="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,52 +250,6 @@
                 <h4>Executive Chef</h4>
                 <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 row-content">
-            <div class="card">
-                <h3 class="card-header bg-warning text-white" id="Reserve">Reserve a Table</h3>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="guests" class="col-sm-4 col-form-label">Number of Guests</label>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 1
-                            </div>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 2 
-                            </div>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 3 
-                            </div>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 4 
-                            </div>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 5 
-                            </div>
-                            <div class="col col-sm-1">
-                                <input type="radio"> 6
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-sm-4 col-form-label">Date and Time</label>
-                            <div class="col-sm-4">
-                                <input type="date" class="form-control" id="date" name="date" placeholder="Date">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="time" class="form-control" id="time" name="time" placeholder="Time">
-                            </div>
-                        </div> 
-                        <div class="form-group row">
-                        <div class="offset-sm-4 col-md-10">
-                            <button type="submit" class="btn btn-primary">
-                                Reserve
-                            </button>
-                        </div>
-                    </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -273,9 +301,18 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
+        $(document).ready(function()
+        {
+            $('#mycarousel').carousel({interval:2000});
+            $('#carousel-pause').click(function()
+            {
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function()
+            {
+                $('#mycarousel').carousel('cycle');
+            });
+        });
     </script>
 </body>
 
